@@ -1,17 +1,19 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-const ArtistList = ({ artist, title, grupo, handleDelete }) => {
-  // const artist = props.artist;
-  // const  title = props.title;
+const ArtistList = ({  title, data, age}) => {
+  
+
+  
   return (
-    <div>
+    <div className="blog-list">
       <h1>{title}</h1>
-      {artist.map((lista) => (
-        <div className="lista-musicos" key={artist.id}>
-          <h2>Name: {lista.name}</h2>
-          <p>He is {lista.age} years old</p>
-          <p>{lista.grupo}</p>
-          <button onClick={() => handleDelete(lista.id)}>delete</button>
+      {data.map((dat) => (
+        <div className="blog-preview" key={dat.id}>
+        <Link to={`/data/${data.id}`}>
+        <h2>Name: {dat.name}</h2>
+          <p>He is {dat.age} years old</p>
+        </Link>
+          
         </div>
       ))}
     </div>
