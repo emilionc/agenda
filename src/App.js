@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Home";
 import Navbar from "./Navbar";
-import { BrowserRouter as Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import ArtistDetail from "./ArtistDetail";
 
 function App() {
