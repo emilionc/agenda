@@ -9,7 +9,7 @@ const ArtistDetail = () => {
     data: dat,
     error,
     isPending,
-  } = useFetch("http://localhost:3000/data" + id);
+  } = useFetch("  http://localhost:4000/data" + id);
 
   return (
     <div className="artist-detail">

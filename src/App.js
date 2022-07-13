@@ -1,24 +1,27 @@
+import { BrowserRouter, Routes,  Route } from "react-router-dom";
+
 import "./App.css";
-import Home from "./Home";
 import Navbar from "./Navbar";
-import { BrowserRouter as Routes, Route } from "react-router-dom";
-import ArtistDetail from "./ArtistDetail";
+import Home from "./Home";
+import Create from "./Create";
+import ArtistDetail from "./ArtistList";
 
 function App() {
   return (
-    <Routes>
+    <BrowserRouter>
       <div className="App">
         <Navbar />
         <div className="content">
-          <Route exact path="/" >
-            <Home />
-          </Route>
-          <Route path="/data/:id">
-            <ArtistDetail />
-          </Route>
+        <Routes>
+          <Route path='/'  element={<Home/>}  />
+          <Route path="/create" element={<Create/>} />
+          <Route path="/ArtistDetail/:id" element={<ArtistDetail/>} />
+          <Route path="*" element={<div>nada aca</div>} />
+
+          </Routes>
         </div>
       </div>
-    </Routes>
+    </BrowserRouter>
   );
 }
 
