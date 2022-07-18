@@ -5,20 +5,20 @@ import useFetch from "./useFetch";
 const ArtistDetail = () => {
   const { id } = useParams();
 
-  const {
-    data: dat,
-    error,
-    isPending,
-  } = useFetch("  http://localhost:4000/data" + id);
+  const { data:musico, error, isPending } = useFetch(
+    "       http://localhost:8000/musicos" + id
+  );
 
   return (
     <div className="artist-detail">
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      {dat && (
+      {musico && (
         <div>
-          <h2>{dat.title}</h2>
-          <p>Written by {dat.age}</p>
+          <h2>{musico.name}</h2>
+          <p>
+            Written by {id} {musico.grupo}
+          </p>
         </div>
       )}
     </div>

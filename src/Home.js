@@ -4,15 +4,15 @@ const Home = () => {
   const {
     error,
     isPending,
-     data,
-  } = useFetch("  http://localhost:4000/data");
+     data: musicos,
+  } = useFetch("        http://localhost:8000/musicos");
 
   return (
     <div>
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
 
-      {data && <ArtistList data={data} title="Lista de musicos" />}
+      {musicos && <ArtistList musicos={musicos} title="Lista de musicos" />}
     </div>
   );
 };

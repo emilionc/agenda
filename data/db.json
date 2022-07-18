@@ -1,5 +1,5 @@
 {
-    "data" : [
+    "musicos" : [
     { "name": "John Lennon", "age": 27, "grupo": "beatles", "id": 1 },
     { "name": "Paul Maccartney", "age": 26, "grupo": "beatles", "id": 2 },
     { "name": "Mick Jagger", "age": 28, "grupo": "stones", "id": 3}
